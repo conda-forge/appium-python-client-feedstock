@@ -1,5 +1,5 @@
 {% set name = "appium-python-client" %}
-{% set version = "1.0.2" %}
+{% set version = "1.1.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Appium-Python-Client-{{ version }}.tar.gz
-  sha256: 44e2cf8040dc9d52ad2947046f221eddfbf4055b8c99615e3f1808b6aeb6a8ec
+  sha256: 8df191c5c3563649e178755e86b306d99fe15ebb8b8ad4ca30896a67d8bb9449
 
 build:
   number: 0

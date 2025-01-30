@@ -1,6 +1,6 @@
 {% set python_min = '3.12' %}
 {% set name = "appium-python-client" %}
-{% set version = "4.5.0" %}
+{% set version = "3.2.1" %}
 
 
 package:
@@ -8,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/appium_python_client-{{ version }}.tar.gz
-  sha256: 79dc34119b1fe3ec0eae4fe31fb008184aed3e2837725fdbb1aadb7b64c62d39
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Appium-Python-Client-{{ version }}.tar.gz
+  sha256: f48be85e66aa887fa5e1583785ecff4671dc5ce3dde54a5d550d816a87c9d635
 
 build:
   number: 0
@@ -23,7 +23,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - selenium ~=4.26,<5.0
+    - selenium ~=4.12
 
 test:
   imports:

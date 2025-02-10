@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/Appium-Python-Client-{{ version }}.tar.gz
-  sha256: f48be85e66aa887fa5e1583785ecff4671dc5ce3dde54a5d550d816a87c9d635
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/appium_python_client-{{ version }}.tar.gz
+  sha256: 79dc34119b1fe3ec0eae4fe31fb008184aed3e2837725fdbb1aadb7b64c62d39
 
 build:
   number: 0

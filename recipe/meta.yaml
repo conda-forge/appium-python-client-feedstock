@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/appium_python_client-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/appium_python_client-{{ version }}.tar.gz
   sha256: 79dc34119b1fe3ec0eae4fe31fb008184aed3e2837725fdbb1aadb7b64c62d39
 
 build:

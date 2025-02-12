@@ -1,4 +1,3 @@
-{% set python_min = '3.9' %}
 {% set name = "appium-python-client" %}
 {% set version = "3.2.1" %}
 

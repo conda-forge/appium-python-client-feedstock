@@ -39,6 +39,16 @@ tests:
       python_version:
         - ${{ python_min }}.*
         - ${{ python_check_max }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - selenium ${{ selenium_min }}.*
+        - pip
+    script:
+      # extra pip check to catch updated minimum selenium
+      - pip check
+      # not really expecting this to be wrong, but might as well
+      - python -c "from appium.common.helper import library_version; assert library_version() == '${{ version }}'"
 
 about:
   summary: Python client for Appium

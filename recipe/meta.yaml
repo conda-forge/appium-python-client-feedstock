@@ -1,5 +1,5 @@
 {% set name = "appium-python-client" %}
-{% set version = "3.2.1" %}
+{% set version = "5.2.6" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/Appium-Python-Client-{{ version }}.tar.gz
-  sha256: f48be85e66aa887fa5e1583785ecff4671dc5ce3dde54a5d550d816a87c9d635
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 708a604756f105f2e549dae43068f5785d9aab70c47927d6a0a0f0ed93378004
 
 build:
   number: 0

@@ -1,0 +1,65 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/prefix-dev/recipe-format/main/schema.json
+schema_version: 1
+
+context:
+  version: 5.1.1
+  python_check_max: "3.13"
+  selenium_min: 4.26.0
+  selenium_max_exclusive: 5.0.0
+
+package:
+  name: appium-python-client
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/a/appium-python-client/appium_python_client-${{ version }}.tar.gz
+  sha256: 3f26e244a09217062e19fe71db9c7390be3fab497dd5e16268e7310fa081b711
+
+build:
+  number: 0
+  noarch: python
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - selenium >=${{ selenium_min }},<${{ selenium_max_exclusive }}
+
+tests:
+  - python:
+      imports:
+        - appium
+        - appium.common
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - ${{ python_check_max }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+        - selenium ${{ selenium_min }}.*
+        - pip
+    script:
+      # extra pip check to catch updated minimum selenium
+      - pip check
+      # not really expecting this to be wrong, but might as well
+      - python -c "from appium.common.helper import library_version; assert library_version() == '${{ version }}'"
+
+about:
+  summary: Python client for Appium
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: http://appium.io
+  repository: https://github.com/appium/python-client
+  documentation: https://appium.io/docs/en/latest/quickstart/test-py
+
+extra:
+  recipe-maintainers:
+    - nisharai1
+    - saibhargav1508
+    - bollwyvl

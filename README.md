@@ -9,6 +9,10 @@ Package license: Apache-2.0
 
 Summary: Python client for Appium
 
+Development: https://github.com/appium/python-client
+
+Documentation: https://appium.io/docs/en/latest/quickstart/test-py
+
 Current build status
 ====================
 
@@ -143,5 +147,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@nisharai1](https://github.com/nisharai1/)
+* [@saibhargav1508](https://github.com/saibhargav1508/)
 
